@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  background: linear-gradient(130deg, rgb(31, 33, 37), rgb(17 17 17));
+  color: rgba(255, 255, 255, 0.75);
+  position: relative;
+  padding: 8px 30px;
+  padding-top: 25px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+.App::-webkit-scrollbar
+{
+  display: none;
+}

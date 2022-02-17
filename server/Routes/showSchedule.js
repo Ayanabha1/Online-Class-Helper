@@ -20,6 +20,7 @@ router.get("/", async (req, res) => {
     res.send(result);
 });
 
+
 router.post("/addClass", async (req, res) => {
   const newClass = new schedules({
     class_day: req.body.class_day,
@@ -37,5 +38,17 @@ router.post("/addClass", async (req, res) => {
     res.status(200).send(err);
   }
 });
+
+
+router.get('/addNumbers',(req,res)=>{
+  let nums = {
+    a : req.body.a,
+    b : req.body.b
+  };
+  
+  let ans = nums.a * nums.b;
+  console.log(ans);
+  res.send(`${ans}`);
+})
 
 module.exports = router;

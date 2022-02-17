@@ -3,6 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 require('dotenv/config');
 const showSchedule = require('./Routes/showSchedule');
+const authRoute = require('./Routes/auth');
 
 
 // Booting the server up
@@ -34,7 +35,9 @@ app.get("/",(req,res)=>{
 })
 
 app.use("/showSchedule",showSchedule);
+app.use("/auth",authRoute);
 
 app.listen(8000,()=>{
     console.log("Server running in port 8000");
 });
+
